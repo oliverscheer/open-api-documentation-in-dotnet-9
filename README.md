@@ -7,36 +7,32 @@ With the release of **.NET 9**, the ASP.NET Core team has decided to **remove bu
 - **Maintenance Challenges**: Swashbuckle is no longer actively maintained, lacks updates, and doesn’t have an official release for .NET 8.  
 - **Native Metadata Support**: ASP.NET Core now includes built-in metadata to describe APIs, reducing the need for external tools.  
 - **Focus on OpenAPI**: Microsoft is enhancing OpenAPI support natively with `Microsoft.AspNetCore.OpenApi` to provide seamless documentation generation.  
-- **Modern Alternatives**: Tools like **`.http` files** and the **Endpoints Explorer** in Visual Studio allow testing and exploration without relying on third-party packages.  
+- **Modern Alternatives**: Tools like **.http files** and the **Endpoints Explorer** in Visual Studio allow testing and exploration without relying on third-party packages.  
 - **Encouraging Innovation**: Removing Swashbuckle as a default encourages community-driven tools that better suit developer needs.
 
 This project demonstrates how to adapt to these changes by leveraging **modern alternatives** and provides practical examples to help you get started.
-
----
 
 ## **What's Included in This Project**
 
 To help developers transition to the new direction of **ASP.NET Core 9**, this repository includes **three samples**:
 
-1. **Using `.http` Files**: A lightweight and modern way to test APIs in **Visual Studio** and **VS Code**.  
+1. **Using .http Files**: A lightweight and modern way to test APIs in **Visual Studio** and **VS Code**.  
 2. **Re-adding Swagger Support**: A sample for those who still want to use Swagger (Swashbuckle) for API documentation.  
 3. **Introducing Scalar**: A powerful alternative to Swagger with additional features, a modern UI, and rich API exploration capabilities.
 
----
+## **Using .http Files**
 
-## **Using `.http` Files**
+**.http files** allow you to define and test **HTTP requests** directly from your editor, such as **Visual Studio Code** with the **REST Client** extension or **Visual Studio**.
 
-**`.http` files** allow you to define and test **HTTP requests** directly from your editor, such as **Visual Studio Code** with the **REST Client** extension or **Visual Studio**.
-
-### **Why `.http` Files?**
+### **Why .http Files?**
 
 - Lightweight, simple, and human-readable.
 - Allows quick testing of endpoints.  
 - Supports variables and response reuse in **Visual Studio Code**.
 
-### **Example: A Simple `.http` File**
+### **Example: A Simple .http File**
 
-```http
+```text
 @hostaddress = https://localhost:5555/calculation
 @value1 = 20
 @value2 = 22
@@ -63,7 +59,7 @@ Content-Type: application/json
 }
 ```
 
-### **Key Notes:**
+### **Notes:**
 
 - In **Visual Studio Code**, the **REST Client** extension supports variables and response reuse (e.g., `add.response.body.result`).  
 - In **Visual Studio**, response variables are not yet supported, but you can still execute requests and debug effectively.
@@ -71,8 +67,6 @@ Content-Type: application/json
 **Example UI in Visual Studio:**
 
 ![HTTP-File in Visual Studio](images/http-files-in-visual-studio.png)
-
----
 
 ## **Re-Adding Swagger Support**
 
@@ -116,8 +110,6 @@ Swagger provides a clear interface to explore and test your API endpoints.
 ![Swagger UI](images/swagger-1.png)
 
 ![Swagger UI](images/swagger-2.png)
-
----
 
 ## **Introducing Scalar: A Modern Alternative**
 
@@ -190,9 +182,9 @@ $.ajax(settings).done(function (response) {
 
 ## **Summary**
 
-With .NET 9, Microsoft has shifted focus to native OpenAPI support, removing the dependency on Swashbuckle. However, with **`.http` files**, **Swagger**, and **Scalar**, you have powerful tools at your disposal:
+With .NET 9, Microsoft has shifted focus to native OpenAPI support, removing the dependency on Swashbuckle. However, with **.http files**, **Swagger**, and **Scalar**, you have powerful tools at your disposal:
 
-1. Use **`.http` files** for lightweight API testing.  
+1. Use **.http files** for lightweight API testing.  
 2. Re-integrate **Swagger** for familiar interactive documentation.  
 3. Explore **Scalar** for a modern, feature-rich alternative with advanced capabilities.  
 
