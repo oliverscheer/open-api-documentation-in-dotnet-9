@@ -1,0 +1,72 @@
+@hostaddress = https://localhost:5555/calculation
+@value1 = 20
+@value2 = 22
+
+### Randomvalue
+GET {{hostaddress}}/randomvalue
+Accept: application/json
+
+### Randomvalue with range
+POST {{hostaddress}}/randomvalueinrange
+Content-Type: application/json
+
+{
+  "min": 1000,
+  "max": 2000
+}
+
+### Add
+# @name add
+POST {{hostaddress}}/add
+Content-Type: application/json
+
+{
+  "value1": {{value1}},
+  "value2": {{value2}}
+}
+
+
+### Add 2
+POST {{hostaddress}}/add
+Content-Type: application/json
+
+{
+  "value1": {{value1}},
+  "value2": {{value2}}
+}
+
+### Subtract
+POST {{hostaddress}}/subtract
+Content-Type: application/json
+
+{
+  "value1": {{value1}},
+  "value2": {{value2}}
+}
+
+### Multiply
+POST {{hostaddress}}/multiply
+Content-Type: application/json
+
+{
+  "value1": {{value1}},
+  "value2": {{value2}}
+}
+
+### Divide
+POST {{hostaddress}}/divide
+Content-Type: application/json
+
+{
+  "value1": {{value1}},
+  "value2": {{value2}}
+}
+
+### Divide by zero
+POST {{hostaddress}}/divide
+Content-Type: application/json
+
+{
+  "value1": 42,
+  "value2": 0
+}
